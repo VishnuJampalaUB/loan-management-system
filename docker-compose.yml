@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: loan_management_app
+        restart: always
+        env_file:
+            - .env
+        volumes:
+            - .:/var/www/html
+        ports:
+            - "8000:9000"
+
+    db:
+        image: mysql:8.0
+        container_name: loan_management_db
+        restart: always
+        environment:
+            MYSQL_DATABASE: ${DB_DATABASE}
+            MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+            MYSQL_USER: ${DB_USERNAME}
+            MYSQL_PASSWORD: ${DB_PASSWORD}
+        ports:
+            - "3306:3306"
+        volumes:
+            - mysql_data:/var/lib/mysql
+
+volumes:
+    mysql_data:
