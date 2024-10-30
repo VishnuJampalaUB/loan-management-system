@@ -11,30 +11,22 @@ A Loan Management System built with Laravel, offering APIs for user registration
    git clone git@github.com:VishnuJampalaUB/loan-management-system.git
    cd loan-management-system
    ```
-### 2. Configure Environment Files
-- **Create `.env` file**: Copy `.env.example` to `.env`, then update values as needed (e.g., database credentials).
-- **Create `.env.testing` file** for integration tests (recommended config: SQLite in-memory database).
 
-```bash
-cp .env.example .env
-cp .env.example .env.testing
-```
-
-### 3. Build and Run with Docker
+### 2. Build and Run with Docker
 To build and start the application along with MySQL in Docker:
 
 ```bash
 docker-compose up --build
 ```
 
-### 4. Run Migrations
+### 3. Run Migrations
 After containers are up, run migrations to create tables in the MySQL database:
 
 ```bash
 docker-compose exec app php artisan migrate
 ```
 
-### 5. Access the Application
+### 4. Access the Application
 - **App URL:** [http://localhost:8000](http://localhost:8000)
 
 
