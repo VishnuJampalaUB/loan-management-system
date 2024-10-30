@@ -8,7 +8,7 @@ A Loan Management System built with Laravel, offering APIs for user registration
 ## Setup Instructions
 ### 1. Clone the Repository
    ```bash
-   git clone https://github.com/VishnuJampalaUB/loan-management-system.git
+   git clone git@github.com:VishnuJampalaUB/loan-management-system.git
    cd loan-management-system
    ```
 ### 2. Configure Environment Files
@@ -37,12 +37,6 @@ docker-compose exec app php artisan migrate
 ### 5. Access the Application
 - **App URL:** [http://localhost:8000](http://localhost:8000)
 
-### Running Tests
-Integration tests are configured to use an SQLite in-memory database.
-
-```bash
-docker-compose exec app php artisan test
-```
 
 ### API Endpoints
 - `POST /api/register` - Register a new user.
@@ -55,4 +49,16 @@ docker-compose exec app php artisan test
 - `DELETE /api/loans` - Delete an existing loan (authentication required, only lender can delete).
 
 ### Postman Collection
+
+- Access the Postman collection - https://www.postman.com/altimetry-explorer-59925640/bda43e84-877d-4850-b3ec-4b09cfae9033/collection/53iwr0h/loan-management-system
+
+- **Automated Token Handling**: Login saves the token globally, auto-attaching it to all authorized requests.
+
+
+### Running Tests
+Integration tests are configured to use an SQLite in-memory database.
+
+```bash
+docker-compose exec app php artisan test
+```
 
