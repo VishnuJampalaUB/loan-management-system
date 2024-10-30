@@ -23,7 +23,7 @@ docker compose up --build
 After containers are up, run migrations to create tables in the MySQL database:
 
 ```bash
-docker compose exec app php artisan migrate
+docker compose exec app php artisan migrate:fresh
 ```
 
 ### 4. Access the Application
