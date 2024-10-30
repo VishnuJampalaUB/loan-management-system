@@ -16,14 +16,14 @@ A Loan Management System built with Laravel, offering APIs for user registration
 To build and start the application along with MySQL in Docker:
 
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
 
 ### 3. Run Migrations
 After containers are up, run migrations to create tables in the MySQL database:
 
 ```bash
-docker-compose exec app php artisan migrate
+docker compose exec app php artisan migrate
 ```
 
 ### 4. Access the Application
