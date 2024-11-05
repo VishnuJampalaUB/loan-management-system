@@ -71,4 +71,9 @@ class Loan extends Model
     {
         return $this->belongsTo(User::class, 'borrower_id');
     }
+
+    public function repayments()
+    {
+        return $this->hasMany(Repayment::class);
+    }
 }

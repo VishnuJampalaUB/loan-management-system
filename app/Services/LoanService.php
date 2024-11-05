@@ -39,6 +39,8 @@ class LoanService
     public function updateLoan($id, array $data, $lenderId)
     {
         return $this->loanRepo->update($id, $data, $lenderId);
+
+        //
     }
 
     // Delete a loan if the request comes from the lender who created it
